@@ -1,38 +1,70 @@
-.App {
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+
+body {
+  background-image: linear-gradient(#222222,  #444444);
+  color: white;
+  text-shadow: 1px 3px 3px #22222250 !important;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.main {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader {
+  color: #ff5346;
+}
+
+.data {
+  font-size: 1.25rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.data svg {
+  width: 200px;
+  height: 200px;
+  padding: 25px;
+  fill: #ff5346;
+  -webkit-animation: spin 60s infinite linear;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.data .time {
+  margin: 15px;
+  font-size: 1rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.data span {
+  color: #ff5346;
+  font-weight: bold;
+}
+
+.data .credits {
+  color: #999999;
+  margin-top: 25px;
+  font-size: 0.75rem;
+}
+
+.data .credits a {
+  color: #999999;
+}
+
+.data .credits a:hover {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+@-moz-keyframes spin {
+  from { -moz-transform: rotate(0deg); }
+  to { -moz-transform: rotate(360deg); }
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@-webkit-keyframes spin {
+  from { -webkit-transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+  from {transform:rotate(0deg);}
+  to {transform:rotate(360deg);}
 }
